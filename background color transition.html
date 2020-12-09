@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      * {
+        margin: 0;
+      }
+      #container1 {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        height: 100vh;
+        background: linear-gradient(to right, #ffaa00 50%, white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 1.5s ease-out;
+      }
+
+      #button {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        outline-width: 0;
+        color: white;
+        background-color: transparent;
+        background: linear-gradient(to right, black 50%, #ff0000 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 1.5s ease-out;
+      }
+    </style>
+  </head>
+  <body id="change">
+    <script>
+      function buttonClick() {
+        setTimeout(function () {
+          document.getElementById("container1").style =
+            "background-position: left bottom;";
+          document.getElementById("button").style =
+            "background-position: left bottom;";
+        }, 300);
+      }
+    </script>
+
+    <div id="container1">
+      <div id="container2">
+        <button id="button" onclick="buttonClick()">Change Color</button>
+      </div>
+    </div>
+  </body>
+</html>

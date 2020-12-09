@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      #container1 {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        height: 100vh;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+      #container2 {
+        display: grid;
+        place-items: center;
+        height: 500px;
+        width: 900px;
+      }
+      #container3 {
+        display: grid;
+        place-items: center;
+        height: 300px;
+        width: 500px;
+      }
+      #container4 {
+        display: grid;
+        place-items: center;
+        height: 100px;
+        width: 300px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body id="change">
+    <script>
+      function buttonClick() {
+        setTimeout(function () {
+          document.getElementById("change").style = "background-color: #000;";
+          document.getElementById("container1").style =
+            "background-color: red;";
+          document.getElementById("container2").style =
+            "background-color: green;";
+          document.getElementById("container3").style =
+            "background-color: yellow;";
+          document.getElementById("container4").style =
+            "background-color: black;";
+          document.getElementById("font").style = "color: #fff;";
+        }, 500);
+      }
+    </script>
+
+    <div id="container1">
+      <div id="container2">
+        <div id="container3">
+          <div id="container4">
+            <h2 id="font">Change Color</h2>
+            <button onclick="buttonClick()">Change</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
